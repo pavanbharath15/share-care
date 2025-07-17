@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Helping Hands Network</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(-45deg, #f3e7e9, #e3eeff, #e3eeff, #f3e7e9);
+            background-size: 400% 400%;
+            animation: gradientBG 20s ease infinite;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in forwards;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 1000px;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .stat-card {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin: 1rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #4285F4;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: #777;
+        }
+
+        .location-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .location-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+            color: #4285F4;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 2rem;
+            }
+
+            .stat-card {
+                min-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Helping Hands Network</h1>
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-hand-holding-heart stat-icon"></i>
+                <div class="stat-value">1,234</div>
+                <div class="stat-label">Donations Accepted</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-dollar-sign stat-icon"></i>
+                <div class="stat-value">$567,890</div>
+                <div class="stat-label">Charity Money Raised</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-calendar-check stat-icon"></i>
+                <div class="stat-value">89</div>
+                <div class="stat-label">Events Conducted</div>
+            </div>
+        </div>
+        <div class="location-container">
+            <i class="fas fa-map-marker-alt location-icon"></i>
+            <span>New York City, NY</span>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.style.opacity = '1';
+        });
+    </script>
+</body>
+</html>
